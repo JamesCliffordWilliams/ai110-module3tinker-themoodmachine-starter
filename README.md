@@ -65,3 +65,15 @@ During this lab you will:
 - When debugging, print tokens, scores, or intermediate choices.
 - Ask an AI assistant to help create edge case posts or unusual wording.
 - Try examples that mislead or confuse your model. Failure cases teach you the most.
+
+---
+
+## Guiding Questions
+
+A few questions to keep in mind as you work through the task:
+
+- Which words push a post toward positive or negative, and what happens when a post
+  contains none of them?
+- Find one post the model gets wrong. Why does it fail, and what change would fix it?
+- Where do your rule-based model and the ML model disagree, and what does that tell you
+  about each approach?
