@@ -42,7 +42,6 @@ NEGATIVE_WORDS = [
 # Starter labeled dataset
 # ---------------------------------------------------------------------
 
-# Short example posts written as if they were social media updates or messages.
 SAMPLE_POSTS = [
     "I love this class so much",
     "Today was a terrible day",
@@ -50,14 +49,18 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+
+    # --- New posts ---
+    "lowkey had a rough day but we move",
+    "this weather got me feeling some type of way",
+    "I mean it could be worse I guess",
+    "lol that was actually kinda fun 😂",
+    "not gonna lie I’m over it already",
+    "why does everything feel off today 🥲",
+    "just finished and I don’t even know how to feel",
+    "highkey tired but still gotta get this done",
 ]
 
-# Human labels for each post above.
-# Allowed labels in the starter:
-#   - "positive"
-#   - "negative"
-#   - "neutral"
-#   - "mixed"
 TRUE_LABELS = [
     "positive",  # "I love this class so much"
     "negative",  # "Today was a terrible day"
@@ -65,30 +68,17 @@ TRUE_LABELS = [
     "neutral",   # "This is fine"
     "positive",  # "So excited for the weekend"
     "negative",  # "I am not happy about this"
+
+    # --- Labels for new posts ---
+    "mixed",     # "lowkey had a rough day but we move"
+    "mixed",     # "this weather got me feeling some type of way"
+    "neutral",   # "I mean it could be worse I guess"
+    "positive",  # "lol that was actually kinda fun 😂"
+    "negative",  # "not gonna lie I’m over it already"
+    "negative",  # "why does everything feel off today 🥲"
+    "mixed",     # "just finished and I don’t even know how to feel"
+    "mixed",     # "highkey tired but still gotta get this done"
 ]
 
-# TODO: Add 5-10 more posts and labels.
-#
-# Requirements:
-#   - For every new post you add to SAMPLE_POSTS, you must add one
-#     matching label to TRUE_LABELS.
-#   - SAMPLE_POSTS and TRUE_LABELS must always have the same length.
-#   - Include a variety of language styles, such as:
-#       * Slang ("lowkey", "highkey", "no cap")
-#       * Emojis (":)", ":(", "🥲", "😂", "💀")
-#       * Sarcasm ("I absolutely love getting stuck in traffic")
-#       * Ambiguous or mixed feelings
-#
-# Tips:
-#   - Try to create some examples that are hard to label even for you.
-#   - Make a note of any examples that you and a friend might disagree on.
-#     Those "edge cases" are interesting to inspect for both the rule based
-#     and ML models.
-#
-# Example of how you might extend the lists:
-#
-# SAMPLE_POSTS.append("Lowkey stressed but kind of proud of myself")
-# TRUE_LABELS.append("mixed")
-#
-# Remember to keep them aligned:
-#   len(SAMPLE_POSTS) == len(TRUE_LABELS)
+# sanity check (optional but helpful)
+assert len(SAMPLE_POSTS) == len(TRUE_LABELS)
